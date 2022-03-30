@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -14,8 +14,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #FE6F61;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +35,8 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
