@@ -7,13 +7,22 @@ const SingleUser = (props: {
   picture: string;
   firstName: string;
   lastName: string;
+  isActive: boolean;
 }) => {
   let firstLetter = props.lastName.split("")[0];
+  let active =
+    "rounded-full col-start-5 col-end-5 w-3 h-3 bg-[#40D301] place-self-center";
+
+  if (!props.isActive) {
+    active =
+      "rounded-full col-start-5 col-end-5 w-3 h-3 bg-[#d30101] place-self-center";
+  }
 
   return (
     <div key={props.id} className="grid place-items-center px-4 py-4">
       <img
-      width="130" height="130"
+        width="130"
+        height="130"
         src={props.picture}
         alt="#"
         className=" rounded-full object-cover"
@@ -22,13 +31,9 @@ const SingleUser = (props: {
         <h4 className="col-start-1 col-end-5 text-lg" key={props.id}>
           {props.firstName} {firstLetter}.
         </h4>
-        <span className="rounded-full col-start-5 col-end-5 w-3 h-3 bg-[#40D301] place-self-center" />
+        <span className={active} />
 
-        <img
-          src={Dots}
-          alt="logo"
-          className="w-5 h-5  col-start-6 col-end-6"
-        />
+        <img src={Dots} alt="logo" className="w-5 h-5  col-start-6 col-end-6" />
       </div>
     </div>
   );

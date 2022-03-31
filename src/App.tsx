@@ -18,6 +18,7 @@ const mockData: {
   location: string;
   chorsToDo: number;
   chorsDone: number;
+  isActive: boolean;
 }[] = [
   {
     id: 1,
@@ -29,6 +30,7 @@ const mockData: {
     location: "Varna",
     chorsToDo: 5,
     chorsDone: 3,
+    isActive: true,
   },
   {
     id: 2,
@@ -41,6 +43,7 @@ const mockData: {
     location: "Varna",
     chorsToDo: 5,
     chorsDone: 5,
+    isActive: true,
   },
   {
     id: 5,
@@ -53,6 +56,7 @@ const mockData: {
     location: "Varna",
     chorsToDo: 5,
     chorsDone: 5,
+    isActive: true,
   },
   {
     id: 4,
@@ -65,6 +69,7 @@ const mockData: {
     location: "Varna",
     chorsToDo: 5,
     chorsDone: 5,
+    isActive: false,
   },
 ];
 

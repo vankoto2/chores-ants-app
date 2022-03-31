@@ -13,6 +13,7 @@ interface UsersListProps {
     location: string;
     chorsToDo: number;
     chorsDone: number;
+    isActive: boolean;
   }[];
 }
 
@@ -28,17 +29,19 @@ const Home: React.FC<UsersListProps> = (props) => {
             picture={user.picture}
             firstName={user.firstName}
             lastName={user.lastName}
+            isActive={user.isActive}
           />
         ))}
       </div>
       <form>
-        <div className="bg-[#FECFB1] py-2 grid justify-items-stretch">
+        <div className="bg-[#FECFB1] py-2 mt-3 flex -space-x-12 overflow-hidden justify-center">
           <input
             aria-label="test"
             type="text"
             placeholder="massage..."
-            className="py-3 px-20 w-10/12 justify-self-center rounded-3xl"
+            className="py-3 px-20 w-auto justify-self-center rounded-3xl"
           />
+          <button className="rounded-full w-12 h-12 bg-[#f53a3a] justify-self-end"></button>
         </div>
       </form>
       <div className="grid justify-items-stretch">
