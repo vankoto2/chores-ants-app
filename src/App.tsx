@@ -73,7 +73,7 @@ const mockData: {
   },
 ];
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <Navigation />
