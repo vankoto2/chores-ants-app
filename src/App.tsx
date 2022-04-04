@@ -2,11 +2,12 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Navigation from "./components/layout/Navigation";
-import Home from "./components/Home";
-import DailyTasks from "./components/DailyTasks";
-import User from "./components/User";
-import Score from "./components/Score";
+import Home from "./pages/Home";
+import DailyTasks from "./pages/DailyTasks";
+import User from "./pages/User";
+import Score from "./pages/Score";
 import "./App.css";
+import Menu from "./components/layout/Menu";
 
 const mockData: {
   id: number;
@@ -19,6 +20,7 @@ const mockData: {
   chorsToDo: number;
   chorsDone: number;
   isActive: boolean;
+  tasks: any;
 }[] = [
   {
     id: 1,
@@ -31,6 +33,24 @@ const mockData: {
     chorsToDo: 5,
     chorsDone: 3,
     isActive: true,
+    tasks: [
+      {
+        idTask: 1,
+        taskName: "Laundry",
+        description: "lorem ipson",
+        times: 3,
+        picture: "https://avatars.githubusercontent.com/u/68854043?v=4",
+        done: true,
+      },
+      {
+        idTask: 2,
+        taskName: "Dishes",
+        description: "lorem ipson",
+        times: 3,
+        picture: "https://avatars.githubusercontent.com/u/68854043?v=4",
+        done: true,
+      },
+    ],
   },
   {
     id: 2,
@@ -44,6 +64,24 @@ const mockData: {
     chorsToDo: 5,
     chorsDone: 5,
     isActive: true,
+    tasks: [
+      {
+        idTask: 1,
+        taskName: "Laundry",
+        description: "lorem ipson",
+        times: 3,
+        picture: "https://avatars.githubusercontent.com/u/68854043?v=4",
+        done: true,
+      },
+      {
+        idTask: 2,
+        taskName: "Dishes",
+        description: "lorem ipson",
+        times: 3,
+        picture: "https://avatars.githubusercontent.com/u/68854043?v=4",
+        done: true,
+      },
+    ],
   },
   {
     id: 5,
@@ -57,6 +95,24 @@ const mockData: {
     chorsToDo: 5,
     chorsDone: 5,
     isActive: true,
+    tasks: [
+      {
+        idTask: 1,
+        taskName: "Laundry",
+        description: "lorem ipson",
+        times: 3,
+        picture: "https://avatars.githubusercontent.com/u/68854043?v=4",
+        done: true,
+      },
+      {
+        idTask: 2,
+        taskName: "Dishes",
+        description: "lorem ipson",
+        times: 3,
+        picture: "https://avatars.githubusercontent.com/u/68854043?v=4",
+        done: true,
+      },
+    ],
   },
   {
     id: 4,
@@ -70,21 +126,40 @@ const mockData: {
     chorsToDo: 5,
     chorsDone: 5,
     isActive: false,
+    tasks: [
+      {
+        idTask: 1,
+        taskName: "Laundry",
+        description: "lorem ipson",
+        times: 3,
+        picture: "https://avatars.githubusercontent.com/u/68854043?v=4",
+        done: true,
+      },
+      {
+        idTask: 2,
+        taskName: "Dishes",
+        description: "lorem ipson",
+        times: 3,
+        picture: "https://avatars.githubusercontent.com/u/68854043?v=4",
+        done: true,
+      },
+    ],
   },
 ];
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div className="App container mx-auto">
       <Navigation />
       <Routes>
         <Route path="/home" element={<Home users={mockData} />} />
-        <Route path="/daily-tasks" element={<DailyTasks />} />
+        <Route path="/daily-tasks" element={<DailyTasks users={mockData} />} />
         <Route path="/user" element={<User />} />
         <Route path="/score" element={<Score />} />
       </Routes>
+      <Menu />
     </div>
   );
-}
+};
 
 export default App;

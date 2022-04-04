@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import SingleUser from "./SingleUser";
+import SingleUser from "../components/SingleUser";
 
 interface UsersListProps {
   users: {
@@ -20,7 +20,10 @@ interface UsersListProps {
 const Home: React.FC<UsersListProps> = (props) => {
   return (
     <Fragment>
-      <h2 className="px-4 pt-4 text-2xl font-bold">Family Members</h2>
+      <div className="grid grid-cols-8 items-center" >
+
+      <h1 className="col-start-2 col-end-8 pt-4 text-2xl font-bold">Family Members</h1>
+      </ div>
       <div className="grid grid-cols-2">
         {props.users.map((user) => (
           <SingleUser
@@ -32,6 +35,9 @@ const Home: React.FC<UsersListProps> = (props) => {
             isActive={user.isActive}
           />
         ))}
+      </div>
+      <div className="px-4 py-24 mx-auto bg-[#ffe3e3]">
+        chat
       </div>
       <form>
         <div className="bg-[#FECFB1] py-2 mt-3 flex -space-x-12 overflow-hidden justify-center">
