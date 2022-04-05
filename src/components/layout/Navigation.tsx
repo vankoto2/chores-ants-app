@@ -5,7 +5,7 @@ import LogoName from "../../svg/logo.svg";
 
 const Navigation = () => {
   return (
-    <nav className="container flex justify-between px-4 py-8 mx-auto bg-[#FE6F61]">
+    <nav className="container flex justify-between px-4 py-8 mx-auto bg-orange">
       <div>
         <img
           src={LogoName}
@@ -28,7 +28,7 @@ const Navigation = () => {
         <ul className="dropdown-menu absolute hidden text-gray-700 pt-20 inset-y-0 right-0">
           <li className="">
             <Link
-              className="rounded-t bg-[#FECFB1] hover:bg-[#FE6F61] py-2 px-4 my-0 block whitespace-no-wrap border"
+              className="rounded-t bg-[#FECFB1] hover:bg-orange py-2 px-4 my-0 block whitespace-no-wrap border"
               to="/home"
             >
               Home
@@ -36,7 +36,7 @@ const Navigation = () => {
           </li>
           <li className="">
             <Link
-              className="bg-[#FECFB1] hover:bg-[#FE6F61] py-2 px-4 block whitespace-no-wrap border"
+              className="bg-[#FECFB1] hover:bg-orange py-2 px-4 block whitespace-no-wrap border"
               to="/daily-tasks"
             >
               Daily Tasks
@@ -44,7 +44,7 @@ const Navigation = () => {
           </li>
           <li className="">
             <Link
-              className="bg-[#FECFB1] hover:bg-[#FE6F61] py-2 px-4 block whitespace-no-wrap border"
+              className="bg-[#FECFB1] hover:bg-orange py-2 px-4 block whitespace-no-wrap border"
               to="/user"
             >
               User
@@ -52,7 +52,7 @@ const Navigation = () => {
           </li>
           <li className="">
             <Link
-              className="rounded-b bg-[#FECFB1] hover:bg-[#FE6F61] py-2 px-4 block whitespace-no-wrap border"
+              className="rounded-b bg-[#FECFB1] hover:bg-orange py-2 px-4 block whitespace-no-wrap border"
               to="/score"
             >
               Score

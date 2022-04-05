@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Dots from "../svg/three-dots-vertical_1.svg";
+import Dots from "../../svg/three-dots-vertical_1.svg";
 
 const SingleUser = (props: {
   id: React.Key;

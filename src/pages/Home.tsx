@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import SingleUser from "../components/SingleUser";
+import SingleUser from "../components/users/SingleUser";
 
 interface UsersListProps {
   users: {
@@ -40,19 +40,19 @@ const Home: React.FC<UsersListProps> = (props) => {
         chat
       </div>
       <form>
-        <div className="bg-[#FECFB1] py-2 mt-3 flex -space-x-12 overflow-hidden justify-center">
+        <div className="bg-[#FECFB1] py-2 mt-3 flex -space-x-9 overflow-hidden justify-center">
           <input
             aria-label="test"
             type="text"
             placeholder="massage..."
-            className="py-3 px-20 w-auto justify-self-center rounded-3xl"
+            className="py-2 px-20 w-auto justify-self-center rounded-3xl border-inherit"
           />
-          <button className="rounded-full w-12 h-12 bg-[#f53a3a] justify-self-end"></button>
+          <button className="rounded-full w-11 h-11 bg-orange justify-self-end"></button>
         </div>
       </form>
       <div className="grid justify-items-stretch">
         <div className="pt-4 justify-self-center">
-          <button className="rounded-full w-20 h-20 bg-[#f53a3a]"></button>
+          <button className="rounded-full w-20 h-20 bg-orange"></button>
         </div>
         <div className="px-4 text-2xl font-bold justify-self-center">
           Emergency Call

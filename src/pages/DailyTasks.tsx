@@ -1,21 +1,20 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
+import UserTasks from "../components/users/UserTasks";
 
 import Dots from "../svg/gear.svg";
 
 interface UsersListProps {
   users: {
     id: number;
-    firstName: string;
-    lastName: string;
-    picture: string;
-    allergy: string;
-    birthDay: string;
-    location: string;
-    chorsToDo: number;
-    chorsDone: number;
-    isActive: boolean;
-    tasks: any;
+    tasks: {
+      idTask: number,
+      taskName: string,
+      description: string,
+      times: number,
+      picture: string,
+      done: boolean,
+    }[];
   }[];
 }
 
@@ -23,7 +22,7 @@ const DailyTasks: React.FC<UsersListProps> = (props) => {
   return (
     <Fragment>
       <div className="grid grid-cols-8 items-center">
-        <h1 className="col-start-2 col-end-8 pt-4 text-2xl font-bold">
+        <h1 className="col-start-2 col-end-8 py-4 text-2xl font-bold">
           DailyTasks
         </h1>
         <Link to={`/`}>
@@ -34,20 +33,17 @@ const DailyTasks: React.FC<UsersListProps> = (props) => {
           />
         </Link>
       </div>
-      <div className="grid grid-cols-8 items-center">
-        <img
-          width="130"
-          height="130"
-          src={props.users[0].tasks[0].picture}
-          alt="#"
-          className="rounded-full object-cover col-start-2 col-end-4"
-        ></img>
-        <div className="col-start-5 col-end-8">
-          <div>Name</div>
-          <div>description</div>
-        </div>
-          <input type="checkbox" />
-      </div>
+      {props.users[0].tasks.map((task) => (
+        <UserTasks
+          key={task.idTask}
+          id={task.idTask}
+          taskName={task.taskName}
+          description={task.description}
+          times={task.times}
+          picture={task.picture}
+          done={task.done}
+        />
+      ))}
     </Fragment>
   );
 };
