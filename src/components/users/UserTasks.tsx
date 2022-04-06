@@ -24,10 +24,17 @@ const UserTasks = (props: any) => {
       ></img>
       <div className="col-start-3 col-end-7 ml-10 px-2">
         <div className="text-2xl font-bold">{props.taskName}</div>
-        <div className="text-xs">You've finished this task {props.times} times this month</div>
+        <div className="text-xs">
+          You've finished this task {props.times} times this month
+        </div>
       </div>
       <div className="col-start-7 col-end-8 ml-5 px-2">
-        <input className="border-orange text-orange focus:ring-orange w-9 h-9 bg-orange rounded-lg focus:ring-0" type="checkbox" checked={checked} onChange={handleChange} />
+        <input
+          className="border-orange text-orange  focus:ring-orange w-9 h-9 bg-orange rounded-lg focus:ring-0"
+          type="checkbox"
+          checked={checked}
+          onChange={handleChange}
+        />
       </div>
     </div>
   );
