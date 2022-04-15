@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import LogoName from "../../svg/logo.svg";
 
-const Navigation = () => {
+const Navigation = (props:any) => {
   return (
     <nav className="container flex justify-between px-4 py-8 mx-auto bg-orange">
       <div>

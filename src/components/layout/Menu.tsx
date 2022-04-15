@@ -4,20 +4,34 @@ import { NavLink } from "react-router-dom";
 const Menu = () => {
   return (
     <div className="absolute bottom-0 left-0 right-0 h-12 w-full bg-[#fafafa] grid grid-cols-6 place-items-center px-8">
-      <NavLink to="/home" className="col-start-2 col-span-1">
+      <NavLink
+        to="/home"
+        className={({ isActive }) =>
+          isActive
+            ? "col-start-2 col-span-1 fill-orange"
+            : "col-start-2 col-span-1 fill-black"
+        }
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 hover:fill-orange"
+          className={"h-5 w-5 hover:fill-orange fill-inherit"}
           viewBox="0 0 20 20"
           fill="currentColor"
         >
           <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
         </svg>
       </NavLink>
-      <NavLink to="/daily-tasks" className="col-start-3 col-span-1">
+      <NavLink
+        to="/daily-tasks"
+        className={({ isActive }) =>
+          isActive
+            ? "col-start-3 col-span-1  stroke-orange"
+            : "col-start-3 col-span-1 stroke-black"
+        }
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 hover:stroke-orange active:stroke-orange"
+          className="h-5 w-5 hover:stroke-orange  stroke-inherit"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -30,10 +44,17 @@ const Menu = () => {
           />
         </svg>
       </NavLink>
-      <NavLink to="/user" className="col-start-4 col-span-1">
+      <NavLink
+        to="/user"
+        className={({ isActive }) =>
+          isActive
+            ? "col-start-4 col-span-1 fill-orange "
+            : "col-start-4 col-span-1 fill-black"
+        }
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 hover:fill-orange"
+          className="h-5 w-5 hover:fill-orange fill-inherit"
           viewBox="0 0 20 20"
           fill="currentColor"
         >
@@ -44,10 +65,17 @@ const Menu = () => {
           />
         </svg>
       </NavLink>
-      <NavLink to="/score" className="col-start-5 col-span-1">
+      <NavLink
+        to="/score"
+        className={({ isActive }) =>
+          isActive
+            ? "col-start-5 col-span-1 fill-orange "
+            : "col-start-5 col-span-1 fill-black"
+        }
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 hover:fill-orange"
+          className="h-5 w-5 hover:fill-orange fill-inherit"
           viewBox="0 0 20 20"
           fill="currentColor"
         >
