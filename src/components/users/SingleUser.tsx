@@ -34,7 +34,6 @@ const SingleUser = (props: {
         </h4>
         <span className={active} />
         <Link to={`/user/${props.id}`} ><img src={Dots} alt="options" className="w-5 h-5 col-start-6 col-end-6" /></Link>
-        
       </div>
     </div>
   );

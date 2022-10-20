@@ -8,6 +8,7 @@ import User from "./pages/User";
 import Score from "./pages/Score";
 import "./App.css";
 import Menu from "./components/layout/Menu";
+import UserInfo from "./pages/UserInfo";
 
 const mockData: {
   id: number;
@@ -30,7 +31,7 @@ const mockData: {
   }[];
 }[] = [
   {
-    id: 1,
+    id: 0,
     firstName: "Ivan",
     lastName: "Georgiev",
     picture: "https://avatars.githubusercontent.com/u/68854043?v=4",
@@ -71,7 +72,7 @@ const mockData: {
     ],
   },
   {
-    id: 2,
+    id: 1,
     firstName: "Stanislav",
     lastName: "Monev",
     picture:
@@ -102,13 +103,13 @@ const mockData: {
     ],
   },
   {
-    id: 5,
+    id: 2,
     firstName: "Julian",
     lastName: "Vatkovski",
     picture:
-      "https://scontent.fsof9-1.fna.fbcdn.net/v/t1.18169-9/10426849_10207012686254224_310180499831520007_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=174925&_nc_ohc=u5DOGvX6e0EAX-CR6yV&_nc_ht=scontent.fsof9-1.fna&oh=00_AT8E67kQ7Uht7kskmAwHM0YODH_okPiYRUlv2TPGXzY5NQ&oe=627199CF",
+      "https://scontent.fsof10-1.fna.fbcdn.net/v/t1.18169-9/10426849_10207012686254224_310180499831520007_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_ohc=F4_Eg5P990YAX9zd0Ao&_nc_ht=scontent.fsof10-1.fna&oh=00_AT9qktohYKBZbSeqdz6X9ekpirjQaczBLWWMnr4x2qjJ7g&oe=6372AE4F",
     allergy: "polen",
-    birthDay: "26.03.1988",
+    birthDay: "26.03.1987",
     location: "Varna",
     chorsToDo: 5,
     chorsDone: 5,
@@ -133,7 +134,7 @@ const mockData: {
     ],
   },
   {
-    id: 4,
+    id: 3,
     firstName: "Stojan",
     lastName: "Grigorov (SNG)",
     picture:
@@ -142,7 +143,7 @@ const mockData: {
     birthDay: "26.03.1988",
     location: "Varna",
     chorsToDo: 5,
-    chorsDone: 5,
+    chorsDone: 3,
     isActive: false,
     tasks: [
       {
@@ -172,7 +173,8 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/home" element={<Home users={mockData} />} />
         <Route path="/daily-tasks" element={<DailyTasks users={mockData} />} />
-        <Route path="/user" element={<User />} />
+        <Route path="/user" element={<User users={mockData[0]} />} />
+        <Route path="/user/:userId" element={<UserInfo users={mockData} />}></Route>
         <Route path="/score" element={<Score />} />
       </Routes>
       <Menu />
